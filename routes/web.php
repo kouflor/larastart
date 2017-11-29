@@ -16,7 +16,6 @@
  *
  */
 Route::view('/','welcome')->name('home');
-Route::post('request-feature','RequestController@make')->name('request');
 
 /**
  * Authentication Routes

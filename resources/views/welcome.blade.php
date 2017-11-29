@@ -18,40 +18,6 @@
                         <p>I decided that I'd create a scaffolding so that all I had to do was pull the scaffolding and everything was done for me.</p>
                         <p>The scaffolding pulls in many packages that I use the most, as well as some basic functionality for potential sites users.</p>
                     </div>
-
-                    <div class="panel-footer text-right" style="border-top: 1px solid #d3e0e9;">
-                        <a href="#" data-toggle="modal" data-target="#myModal">Request Feature or Package</a>
-                    </div>
-                </div>
-
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <!-- Collapsable One -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                            <div class="level" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <span class="flex">
-                                   <strong>Users Module</strong>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                            <ul class="list-group">
-                                <li class="list-group-item">Registering Users <em>(User role applied on registering)</em></li>
-                                <li class="list-group-item">Login via Username</li>
-                                <li class="list-group-item">Confirm Email Address <em>(Can be turned on or off via Larastart config)</em></li>
-                                <li class="list-group-item">List all Profiles</li>
-                                <li class="list-group-item">View Individual Profile</li>
-                                <li class="list-group-item">Edit Profile</li>
-                                <li class="list-group-item">Edit Settings (updating email address forces re-verifying email).</li>
-                                <li class="list-group-item">Change Password (requires current password).</li>
-                                <li class="list-group-item">Deactivate Account (unable to view profile, removes from users list).</li>
-                                <li class="list-group-item">reCapthca on registration page.</li>
-                                <li class="list-group-item">Online/Offline users.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /Collapsable One -->
                 </div>
             </div>
 
