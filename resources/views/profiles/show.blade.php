@@ -44,7 +44,7 @@
                             <th scope="row">{{ $user->profile->id }}</th>
                             <td>{{ $user->profile->name }}</td>
                             <td>{{ $user->profile->location }}</td>
-                            <td>{{ $user->profile->date_of_birth->format('jS F Y') }} - ({{ $user->profile->age }})</td>
+                            <td>{{ ($user->date_of_birth)?$user->profile->date_of_birth->format('jS F Y'):"" }} - ({{ $user->profile->age }})</td>
                         </tr>
                         </tbody>
                     </table>
