@@ -1,10 +1,14 @@
-#Larastart
+# Larastart
 
-##Install
+## Install
 
  `git clone https://github.com/miiikkeyyyy/larastart`
 
  `composer update`
+ 
+ `cp .env.example .env`
+ 
+ `php artisan key:generate`
 
  `php artisan migrate --seed`
 
