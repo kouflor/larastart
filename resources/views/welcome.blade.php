@@ -54,52 +54,6 @@
 @endsection
 
 @section('footer')
-    <!-- Modal -->
-    <form method="post" action="{{ route('request') }}" class="form-horizontal">
-        {{ csrf_field() }}
-
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-                    </div>
-                    <div class="modal-body" style="!important; padding: 30px; !important;padding-bottom: 0px; !important;padding-top:10px;">
-                        <div class="form-group">
-                            <label for="type" class="control-label">Request Type:</label>
-                            <select name="type" class="form-control" id="type">
-                                <option value="include-package">Include Package</option>
-                                <option value="new-feature">New Feature</option>
-                                <option value="bug-fix">Bug Fix</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="type" class="control-label">Your Email Address:</label>
-                            <input type="email" name="email" class="form-control" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message-text" class="control-label">Message:</label>
-                            <textarea class="form-control" name="body" required></textarea>
-                            <div id="info" style="display: none;">
-                                <div class="alert alert-info">
-                                    <strong>Please:</strong> Give me as much information as you can.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Make Request</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-
     <script>
         $(document).ready(function() {
             // Update packages count
@@ -108,18 +62,6 @@
 
             // Remove border-bottom on last link
             $('.packages a:last').css('border-bottom','none');
-
-            // Request Package
-            $('#type').change(function () {
-                req = $(this).val();
-
-                if(req === "bug-fix")
-                {
-                    $('#info').show();
-                }
-
-                $('.info').hide();
-            });
         });
     </script>
 @endsection
