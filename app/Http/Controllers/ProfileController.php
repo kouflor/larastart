@@ -7,11 +7,10 @@ use App\User;
 use App\Http\Requests\UpdatePasswordRequest;
 use App\Http\Requests\EditUserSettingsRequest;
 
-class ProfileController extends Controller
-{
+class ProfileController extends Controller {
+
     /**
      * ProfileController constructor.
-     *
      */
     public function __construct()
     {
@@ -34,7 +33,7 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string  $username
+     * @param  string $username
      * @return \Illuminate\Http\Response
      */
     public function show($username)
@@ -64,12 +63,12 @@ class ProfileController extends Controller
     public function update()
     {
         auth()->user()->profile()->update([
-            'name' => request('name'),
-            'location' => request('location'),
+            'name'          => request('name'),
+            'location'      => request('location'),
             'date_of_birth' => request('date_of_birth')
         ]);
 
-        return redirect()->back()->with('flash','Profile updated.');
+        return redirect()->back()->with('flash', 'Profile updated.');
     }
 
     /**
@@ -90,7 +89,8 @@ class ProfileController extends Controller
      */
     public function updateSettings(EditUserSettingsRequest $request)
     {
-        if(auth()->user()->email !== request('email')) {
+        if (auth()->user()->email !== request('email'))
+        {
             auth()->user()->unverifyEmail();
         }
 
@@ -98,7 +98,7 @@ class ProfileController extends Controller
             'email' => request('email')
         ]);
 
-        return redirect()->back()->with('flash','Settings updated.');
+        return redirect()->back()->with('flash', 'Settings updated.');
     }
 
     /**
@@ -123,7 +123,7 @@ class ProfileController extends Controller
             'password' => bcrypt(request('password'))
         ]);
 
-        return redirect()->back()->with('flash','Password updated.');
+        return redirect()->back()->with('flash', 'Password updated.');
     }
 
     /**
@@ -134,12 +134,15 @@ class ProfileController extends Controller
      */
     public function verify($token)
     {
-        if( ! $token ) {
+        if (!$token)
+        {
             return false;
         }
 
         $user = User::where('confirm_token', $token)->firstOrFail();
-        $user->verifyEmail();
+        $user->
+        verifyEmail();
+
 
         auth()->loginUsingId($user->id);
 

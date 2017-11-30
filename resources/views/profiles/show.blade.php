@@ -9,9 +9,11 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         @if($user->isOnline())
-                            <span class="text-success" title="User is online!"><i class="glyphicon glyphicon-record"></i> Online!</span><br>
+                            <span class="text-success" title="User is online!"><i
+                                        class="glyphicon glyphicon-record"></i> Online!</span><br>
                         @else
-                            <span class="text-danger" title="User is offline!"><i class="glyphicon glyphicon-record"></i> Offline!</span><br>
+                            <span class="text-danger" title="User is offline!"><i
+                                        class="glyphicon glyphicon-record"></i> Offline!</span><br>
                         @endif
                     </div>
                 </div>
@@ -44,7 +46,9 @@
                             <th scope="row">{{ $user->profile->id }}</th>
                             <td>{{ $user->profile->name }}</td>
                             <td>{{ $user->profile->location }}</td>
-                            <td>{{ ($user->profile->date_of_birth)?$user->profile->date_of_birth->format('jS F Y'):"" }} - ({{ $user->profile->age }})</td>
+                            <td>{{ ($user->profile->date_of_birth)?$user->profile->date_of_birth->format('jS F Y'):"" }}
+                                - ({{ $user->profile->age }})
+                            </td>
                         </tr>
                         </tbody>
                     </table>

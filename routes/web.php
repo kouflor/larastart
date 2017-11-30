@@ -45,6 +45,7 @@ Route::get('password', 'ProfileController@password')->name('edit-password');
 Route::post('password', 'ProfileController@updatePassword')->name('update-password');
 
 Route::get('profiles/{username}', 'ProfileController@show')->name('profile');
+
 Route::get('token/{token}', 'ProfileController@verify')->name('token');
 
 Route::get('deactivate', 'ProfileController@confirmDeactivation')->name('deactivate-page');

@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password','confirm_token','status'
+        'username', 'email', 'password', 'confirm_token', 'status'
     ];
 
     /**
@@ -27,7 +27,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $dispatchesEvents =[
+    protected $dispatchesEvents = [
         'created' => UserWasCreated::class
     ];
 
@@ -101,7 +101,7 @@ class User extends Authenticatable
      */
     public function verifyEmail()
     {
-       return $this->update(['confirm_token' => null]);
+        return $this->update(['confirm_token' => null]);
     }
 
     /**
@@ -126,7 +126,7 @@ class User extends Authenticatable
      */
     public function isOnline()
     {
-        return (is_null($this->online))?false:true;
+        return (is_null($this->online)) ? false : true;
     }
 
     /**
@@ -136,6 +136,6 @@ class User extends Authenticatable
      */
     public function scopeIsActive()
     {
-        return $this->where('status','active');
+        return $this->where('status', 'active');
     }
 }
