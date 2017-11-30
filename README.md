@@ -8,6 +8,9 @@
  
  `cp .env.example .env`
  
+ > At this point you will need to set your database details up.
+ > You will also need to set `SESSION_DRIVER` to `database`
+ 
  `php artisan key:generate`
 
  `php artisan migrate --seed`
