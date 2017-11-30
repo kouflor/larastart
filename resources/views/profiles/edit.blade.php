@@ -28,7 +28,7 @@
                             <div class="form-group">
                                 <label for="date_of_birth" class="col-md-4 control-label">Date of Birth</label>
                                 <div class="col-md-6">
-                                    <input type="date" id="date_of_birth" class="form-control" name="date_of_birth" value="{{ auth()->user()->profile->date_of_birth->format('Y-m-d') }}">
+                                    <input type="date" id="date_of_birth" class="form-control" name="date_of_birth" value="{{ (auth()->user()->profile->date_of_birth)?auth()->user()->profile->date_of_birth->format('Y-m-d'):"" }}">
                                 </div>
                             </div>
 
